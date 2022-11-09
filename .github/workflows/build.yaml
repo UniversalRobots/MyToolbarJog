@@ -7,7 +7,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        SDK_VERSION: [1.12]
+        SDK_VERSION: [1.12.0]
 
     steps:
       - uses: actions/checkout@v1
