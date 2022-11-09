@@ -5,7 +5,7 @@
 
 	<groupId>com.ur.urcap.examples</groupId>
 	<artifactId>mytoolbarjog</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>mytoolbarjog</name>
 	<packaging>bundle</packaging>
 
