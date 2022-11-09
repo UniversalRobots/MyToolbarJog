@@ -17,4 +17,5 @@ cd sdk
 popd
 
 cd com.ur.urcap.examples.mytoolbarjog/
+echo $PWD
 mvn install
