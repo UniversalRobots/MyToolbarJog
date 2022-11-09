@@ -1,0 +1,22 @@
+name: build-urcap
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        SDK_VERSION: [1.12]
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./.github/actions/build_urcap
+        env:
+          SDK_VERSION: ${{ matrix.SDK_VERSION }}
+      - name: Upload urcap_artifact
+        uses: actions/upload-artifact@v1
+        with:
+          path: target
+          name: mytoolbarjog-${{ matrix.SDK_VERSION }}.urcap
+
