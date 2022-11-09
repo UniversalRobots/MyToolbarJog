@@ -17,6 +17,6 @@ jobs:
       - name: Upload urcap_artifact
         uses: actions/upload-artifact@v1
         with:
-          path: target
+          path: com.ur.urcap.examples.mytoolbarjog/target
           name: mytoolbarjog-${{ matrix.SDK_VERSION }}.urcap
 
