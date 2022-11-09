@@ -1,0 +1,5 @@
+target/*
+target/classes/
+/.settings/
+target/*.urcap
+*/target/*
