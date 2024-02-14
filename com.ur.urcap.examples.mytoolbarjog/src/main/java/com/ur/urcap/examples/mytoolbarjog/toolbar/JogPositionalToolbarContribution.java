@@ -44,7 +44,6 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Arrays;
-
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.GroupLayout;
@@ -57,7 +56,6 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
 import com.ur.urcap.api.contribution.toolbar.ToolbarAPIProvider;
 import com.ur.urcap.api.contribution.toolbar.ToolbarContext;
 import com.ur.urcap.api.contribution.toolbar.swing.SwingToolbarContribution;
@@ -90,18 +88,23 @@ public class JogPositionalToolbarContribution implements SwingToolbarContributio
     private final int SLIDER_INCREMENT = 1;
     private final double MIN_MM = 0.1;
     private final double MAX_MM = 10.0;
-
+  
+    
+    
     JogPositionalToolbarContribution(ToolbarContext context) {
         apiProvider = context.getAPIProvider();
         keyboardInputFactory = apiProvider.getUserInterfaceAPI().getUserInteraction().getKeyboardInputFactory();
         validatorFactory = apiProvider.getUserInterfaceAPI().getUserInteraction().getInputValidationFactory();
     }
-
+   
+    
+    
     @Override
     public void buildUI(JPanel panel) {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setAlignmentX(Component.LEFT_ALIGNMENT);
-
+      
+        
         /**
          * Slider group
          */
@@ -116,7 +119,8 @@ public class JogPositionalToolbarContribution implements SwingToolbarContributio
         sliderJPanel.add(stepSizeSliderLabel);
 
         panel.add(sliderJPanel);
-
+        
+        
         /**
          * Jog button group
          */
@@ -127,9 +131,9 @@ public class JogPositionalToolbarContribution implements SwingToolbarContributio
         layout.setAutoCreateContainerGaps(true);
         layout.setAutoCreateGaps(true);
 
-        JLabel label_x = createBoldColoredLabel("X", Color.RED);
-        JLabel label_y = createBoldColoredLabel("Y", Color.GREEN);
-        JLabel label_z = createBoldColoredLabel("Z", Color.BLUE);
+        JLabel label_x = createBoldColoredLabel("X", Color.RED, 28);
+        JLabel label_y = createBoldColoredLabel("Y", Color.GREEN, 28);
+        JLabel label_z = createBoldColoredLabel("Z", Color.BLUE ,28);
 
         Component c_x = label_x;
         Component c_y = label_y;
@@ -171,7 +175,13 @@ public class JogPositionalToolbarContribution implements SwingToolbarContributio
 
         panel.add(buttonJPanel);
     }
+  
+    
 
+    
+    
+    
+    
     /**
      * Create input field for step size
      * 
@@ -179,7 +189,7 @@ public class JogPositionalToolbarContribution implements SwingToolbarContributio
      */
     private JTextField createStepSizeInputField() {
         stepSizeInput = new JTextField();
-        stepSizeInput.setPreferredSize(new Dimension(60, 33));
+        stepSizeInput.setPreferredSize(new Dimension(60, 30));
         stepSizeInput.setMaximumSize(stepSizeInput.getPreferredSize());
         stepSizeInput.addMouseListener(new MouseAdapter() {
             @Override
@@ -196,13 +206,14 @@ public class JogPositionalToolbarContribution implements SwingToolbarContributio
      * 
      * @param text
      * @param color
+     * @param FontSize 
      * @return JLabel colored and bold
      */
-    private JLabel createBoldColoredLabel(String text, Color color) {
+    private JLabel createBoldColoredLabel(String text, Color color, int size ) {
         JLabel tmpJLabel = new JLabel(text);
         tmpJLabel.setForeground(color);
         Font f = tmpJLabel.getFont();
-        tmpJLabel.setFont(f.deriveFont(f.getStyle() | Font.BOLD));
+        tmpJLabel.setFont(f.deriveFont(f.getStyle() | Font.BOLD ,size ));
         return tmpJLabel;
     }
 
@@ -217,7 +228,7 @@ public class JogPositionalToolbarContribution implements SwingToolbarContributio
      */
     private JButton createJogButton(JButton button, Icon icon, final Integer index, final Boolean plus) {
         button = new JButton(icon);
-        button.setPreferredSize(new Dimension(40, 40));
+        button.setPreferredSize(new Dimension(68, 68));
         button.setMaximumSize(button.getPreferredSize());
         button.setMinimumSize(button.getPreferredSize());
 

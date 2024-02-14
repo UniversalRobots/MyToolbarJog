@@ -39,3 +39,10 @@ We welcome contributions to this URCap by the community! Please refer to the [Co
 
 This project is developed by the [Universal Robots A/S](https://universal-robots.com/) (UR) and is released under the [BSD 3-Clause License](LICENSE) found in the root of this repository. [Nicolai Anton Lynnerup](https://github.com/naly-ur) developed the URCap to jog the robot incrementally in cartesian space as a response to customer interviews conducted in 2022. The CI in this repo is heavily inspired by the work of [
 Felix Exner](https://github.com/fmauch) (from: [FZI](https://www.fzi.de/)) performed for UR when developing the [External Control URCap](https://github.com/UniversalRobots/Universal_Robots_ExternalControl_URCap).
+
+## Update View MyToolbarJog
+
+![Screenshot 2024-02-14 100044](https://github.com/SVJ750/MyToolbarJog/assets/104130454/eef6a1cf-90e8-4b8a-82a1-1c19b43fba2b)
+
+
+The size of the buttons and the X,Y,Z symbols has been changed.
