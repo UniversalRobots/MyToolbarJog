@@ -43,3 +43,6 @@ Felix Exner](https://github.com/fmauch) (from: [FZI](https://www.fzi.de/)) perfo
 ## Update View MyToolbarJog
 
 ![Screenshot 2024-02-14 100044](https://github.com/SVJ750/MyToolbarJog/assets/104130454/eef6a1cf-90e8-4b8a-82a1-1c19b43fba2b)
+
+
+The size of the buttons and the X,Y,Z symbols has been changed.
